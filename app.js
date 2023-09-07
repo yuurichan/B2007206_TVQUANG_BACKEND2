@@ -3,15 +3,15 @@ const cors = require("cors");
 
 const app = express();
 
-// const contactsRouter = require("./app/routes/contact.route");
-// const ApiError = require("./app/api-error");
+const contactsRouter = require("./app/routes/contact.route");
+//const ApiError = require("./app/api-error");
 
-// // Adding middlewares
-// app.use(cors());
-// app.use(express.json());
+// Adding middlewares
+app.use(cors());
+app.use(express.json());
 
-// // Routers
-// app.use("/api/contacts", contactsRouter);
+// Routers
+app.use("/api/contacts", contactsRouter);
 
 // // Handle 404/Error Response
 // app.use((req, res, next) => {
